@@ -20,6 +20,7 @@ export type ApiProvider =
 	| "asksage"
 	| "xai"
 	| "sambanova"
+	| "yandexcloud"
 
 export interface ApiHandlerOptions {
 	apiModelId?: string
@@ -73,6 +74,8 @@ export interface ApiHandlerOptions {
 	xaiApiKey?: string
 	thinkingBudgetTokens?: number
 	sambanovaApiKey?: string
+	yandexcloudApiKey?: string
+	yandexcloudFolderId?: string
 }
 
 export type ApiConfiguration = ApiHandlerOptions & {
@@ -253,6 +256,8 @@ export const bedrockModels = {
 		supportsPromptCache: false,
 		inputPrice: 0.25,
 		outputPrice: 1.25,
+		cacheWritesPrice: 0.3,
+		cacheReadsPrice: 0.03,
 	},
 	"deepseek.r1-v1:0": {
 		maxTokens: 8_000,
@@ -1473,3 +1478,37 @@ export const sambanovaModels = {
 		outputPrice: 1.5,
 	},
 } as const satisfies Record<string, ModelInfo>
+
+// YandexCloud
+// https://cloud.yandex.ru/ru/docs/yandexgpt/api-ref/
+export type YandexCloudModelId = keyof typeof yandexCloudModels
+export const yandexCloudDefaultModelId: YandexCloudModelId = "yandexgpt"
+export const yandexCloudModels = {
+	"yandexgpt": {
+		maxTokens: 8192,
+		contextWindow: 24_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 3.0,
+		outputPrice: 3.0,
+		description: "YandexGPT - основная мультизадачная модель для русского и английского языков",
+	},
+	"yandexgpt-lite": {
+		maxTokens: 4096,
+		contextWindow: 8_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 0.6,
+		outputPrice: 0.6,
+		description: "Легкая версия YandexGPT с высокой скоростью обработки запросов",
+	},
+	"summarization": {
+		maxTokens: 4096,
+		contextWindow: 100_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 3.0,
+		outputPrice: 3.0,
+		description: "Модель для создания сжатых рефератов и аннотаций документов на русском языке",
+	},
+}

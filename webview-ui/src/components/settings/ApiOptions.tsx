@@ -47,6 +47,8 @@ import {
 	sambanovaDefaultModelId,
 	doubaoModels,
 	doubaoDefaultModelId,
+	yandexCloudModels,
+	yandexCloudDefaultModelId,
 } from "@shared/api"
 import { ExtensionMessage } from "@shared/ExtensionMessage"
 import { useExtensionState } from "@/context/ExtensionStateContext"
@@ -215,6 +217,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 					<VSCodeOption value="asksage">AskSage</VSCodeOption>
 					<VSCodeOption value="xai">X AI</VSCodeOption>
 					<VSCodeOption value="sambanova">SambaNova</VSCodeOption>
+					<VSCodeOption value="yandexcloud">Yandex Cloud</VSCodeOption>
 				</VSCodeDropdown>
 			</DropdownContainer>
 
@@ -1411,6 +1414,44 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 				</div>
 			)}
 
+				{selectedProvider === "yandexcloud" && (
+				<div>
+					<VSCodeTextField
+						value={apiConfiguration?.yandexcloudApiKey || ""}
+						style={{ width: "100%" }}
+						type="password"
+						onInput={handleInputChange("yandexcloudApiKey")}
+						placeholder="Enter API Key...">
+						<span style={{ fontWeight: 500 }}>Yandex Cloud API Key</span>
+					</VSCodeTextField>
+					<VSCodeTextField
+						value={apiConfiguration?.yandexcloudFolderId || ""}
+						style={{ width: "100%" }}
+						onInput={handleInputChange("yandexcloudFolderId")}
+						placeholder="Enter Folder ID...">
+						<span style={{ fontWeight: 500 }}>Folder ID</span>
+					</VSCodeTextField>
+					<p
+						style={{
+							fontSize: "12px",
+							marginTop: 3,
+							color: "var(--vscode-descriptionForeground)",
+						}}>
+						This key is stored locally and only used to make API requests from this extension.
+						{!apiConfiguration?.yandexcloudApiKey && (
+							<VSCodeLink
+								href="https://cloud.yandex.ru/ru/docs/yandexgpt/api-ref/authentication"
+								style={{
+									display: "inline",
+									fontSize: "inherit",
+								}}>
+								Вы можете получить API ключ Yandex Cloud зарегистрировавшись здесь.
+							</VSCodeLink>
+						)}
+					</p>
+				</div>
+			)}
+
 			{apiErrorMessage && (
 				<p
 					style={{
@@ -1784,6 +1825,8 @@ export function normalizeApiConfiguration(apiConfiguration?: ApiConfiguration): 
 			return getProviderData(xaiModels, xaiDefaultModelId)
 		case "sambanova":
 			return getProviderData(sambanovaModels, sambanovaDefaultModelId)
+		case "yandexcloud":
+			return getProviderData(yandexCloudModels, yandexCloudDefaultModelId)
 		default:
 			return getProviderData(anthropicModels, anthropicDefaultModelId)
 	}
