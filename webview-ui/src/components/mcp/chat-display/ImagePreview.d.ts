@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 interface ImagePreviewProps {
-    url: string;
+	url: string
 }
-declare const ImagePreviewWithErrorBoundary: React.FC<ImagePreviewProps>;
-export default ImagePreviewWithErrorBoundary;
+declare const ImagePreviewWithErrorBoundary: React.FC<ImagePreviewProps>
+export default ImagePreviewWithErrorBoundary

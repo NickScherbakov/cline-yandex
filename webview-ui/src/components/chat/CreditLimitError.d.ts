@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 interface CreditLimitErrorProps {
-    currentBalance: number;
-    totalSpent: number;
-    totalPromotions: number;
-    message: string;
+	currentBalance: number
+	totalSpent: number
+	totalPromotions: number
+	message: string
 }
-declare const CreditLimitError: React.FC<CreditLimitErrorProps>;
-export default CreditLimitError;
+declare const CreditLimitError: React.FC<CreditLimitErrorProps>
+export default CreditLimitError

@@ -1,5 +1,5 @@
 interface MarkdownBlockProps {
-    markdown?: string;
+	markdown?: string
 }
-declare const MarkdownBlock: import("react").MemoExoticComponent<({ markdown }: MarkdownBlockProps) => JSX.Element>;
-export default MarkdownBlock;
+declare const MarkdownBlock: import("react").MemoExoticComponent<({ markdown }: MarkdownBlockProps) => JSX.Element>
+export default MarkdownBlock

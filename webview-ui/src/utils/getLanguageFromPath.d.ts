@@ -1,1 +1,1 @@
-export declare function getLanguageFromPath(path: string): string | undefined;
+export declare function getLanguageFromPath(path: string): string | undefined

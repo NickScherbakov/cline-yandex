@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 interface BrowserSettingsMenuProps {
-    disabled?: boolean;
-    maxWidth?: number;
+	disabled?: boolean
+	maxWidth?: number
 }
-export declare const BrowserSettingsMenu: React.FC<BrowserSettingsMenuProps>;
-export default BrowserSettingsMenu;
+export declare const BrowserSettingsMenu: React.FC<BrowserSettingsMenuProps>
+export default BrowserSettingsMenu

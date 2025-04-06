@@ -1,35 +1,37 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("@vscode/webview-ui-toolkit/react");
-var react_2 = require("react");
-var vscStyles_1 = require("@/utils/vscStyles");
+"use strict"
+Object.defineProperty(exports, "__esModule", { value: true })
+var react_1 = require("@vscode/webview-ui-toolkit/react")
+var react_2 = require("react")
+var vscStyles_1 = require("@/utils/vscStyles")
 var containerStyle = {
-    backgroundColor: (0, vscStyles_1.getAsVar)(vscStyles_1.VSC_INACTIVE_SELECTION_BACKGROUND),
-    borderRadius: "3px",
-    padding: "12px 16px",
-    margin: "5px 15px 5px 15px",
-    position: "relative",
-    flexShrink: 0,
-};
-var closeIconStyle = { position: "absolute", top: "8px", right: "8px" };
-var h3TitleStyle = { margin: "0 0 8px" };
-var ulStyle = { margin: "0 0 8px", paddingLeft: "12px" };
-var accountIconStyle = { fontSize: 11 };
+	backgroundColor: (0, vscStyles_1.getAsVar)(vscStyles_1.VSC_INACTIVE_SELECTION_BACKGROUND),
+	borderRadius: "3px",
+	padding: "12px 16px",
+	margin: "5px 15px 5px 15px",
+	position: "relative",
+	flexShrink: 0,
+}
+var closeIconStyle = { position: "absolute", top: "8px", right: "8px" }
+var h3TitleStyle = { margin: "0 0 8px" }
+var ulStyle = { margin: "0 0 8px", paddingLeft: "12px" }
+var accountIconStyle = { fontSize: 11 }
 var hrStyle = {
-    height: "1px",
-    background: (0, vscStyles_1.getAsVar)(vscStyles_1.VSC_DESCRIPTION_FOREGROUND),
-    opacity: 0.1,
-    margin: "8px 0",
-};
-var linkContainerStyle = { margin: "0" };
-var linkStyle = { display: "inline" };
+	height: "1px",
+	background: (0, vscStyles_1.getAsVar)(vscStyles_1.VSC_DESCRIPTION_FOREGROUND),
+	opacity: 0.1,
+	margin: "8px 0",
+}
+var linkContainerStyle = { margin: "0" }
+var linkStyle = { display: "inline" }
 /*
 You must update the latestAnnouncementId in ClineProvider for new announcements to show to users. This new id will be compared with whats in state for the 'last announcement shown', and if it's different then the announcement will render. As soon as an announcement is shown, the id will be updated in state. This ensures that announcements are not shown more than once, even if the user doesn't close it themselves.
 */
 var Announcement = function (_a) {
-    var version = _a.version, hideAnnouncement = _a.hideAnnouncement;
-    var minorVersion = version.split(".").slice(0, 2).join("."); // 2.0.0 -> 2.0
-    return (<div style={containerStyle}>
+	var version = _a.version,
+		hideAnnouncement = _a.hideAnnouncement
+	var minorVersion = version.split(".").slice(0, 2).join(".") // 2.0.0 -> 2.0
+	return (
+		<div style={containerStyle}>
 			<react_1.VSCodeButton appearance="icon" onClick={hideAnnouncement} style={closeIconStyle}>
 				<span className="codicon codicon-close"></span>
 			</react_1.VSCodeButton>
@@ -101,7 +103,7 @@ var Announcement = function (_a) {
                 environments)
             </li>
         </ul>*/}
-			<div style={hrStyle}/>
+			<div style={hrStyle} />
 			<p style={linkContainerStyle}>
 				Join us on{" "}
 				<react_1.VSCodeLink style={linkStyle} href="https://x.com/cline">
@@ -116,6 +118,7 @@ var Announcement = function (_a) {
 				</react_1.VSCodeLink>
 				for more updates!
 			</p>
-		</div>);
-};
-exports.default = (0, react_2.memo)(Announcement);
+		</div>
+	)
+}
+exports.default = (0, react_2.memo)(Announcement)

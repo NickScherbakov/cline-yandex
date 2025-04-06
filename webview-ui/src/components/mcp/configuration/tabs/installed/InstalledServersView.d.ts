@@ -1,2 +1,2 @@
-declare const InstalledServersView: () => import("react").JSX.Element;
-export default InstalledServersView;
+declare const InstalledServersView: () => import("react").JSX.Element
+export default InstalledServersView

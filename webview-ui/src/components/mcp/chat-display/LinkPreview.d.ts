@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 interface LinkPreviewProps {
-    url: string;
+	url: string
 }
-declare const LinkPreviewWithErrorBoundary: React.FC<LinkPreviewProps>;
-export default LinkPreviewWithErrorBoundary;
+declare const LinkPreviewWithErrorBoundary: React.FC<LinkPreviewProps>
+export default LinkPreviewWithErrorBoundary

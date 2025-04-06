@@ -1,2 +1,2 @@
-declare const McpMarketplaceView: () => import("react").JSX.Element;
-export default McpMarketplaceView;
+declare const McpMarketplaceView: () => import("react").JSX.Element
+export default McpMarketplaceView

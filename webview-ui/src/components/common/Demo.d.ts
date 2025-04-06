@@ -1,2 +1,2 @@
-declare function Demo(): import("react").JSX.Element;
-export default Demo;
+declare function Demo(): import("react").JSX.Element
+export default Demo

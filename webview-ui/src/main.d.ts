@@ -1,2 +1,2 @@
-import "./index.css";
-import "../../node_modules/@vscode/codicons/dist/codicon.css";
+import "./index.css"
+import "../../node_modules/@vscode/codicons/dist/codicon.css"

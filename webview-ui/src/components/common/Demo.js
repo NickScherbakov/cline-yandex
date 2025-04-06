@@ -1,34 +1,35 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("@vscode/webview-ui-toolkit/react");
+"use strict"
+Object.defineProperty(exports, "__esModule", { value: true })
+var react_1 = require("@vscode/webview-ui-toolkit/react")
 function Demo() {
-    // function handleHowdyClick() {
-    // 	vscode.postMessage({
-    // 		command: "hello",
-    // 		text: "Hey there partner! 🤠",
-    // 	})
-    // }
-    var rowData = [
-        {
-            cell1: "Cell Data",
-            cell2: "Cell Data",
-            cell3: "Cell Data",
-            cell4: "Cell Data",
-        },
-        {
-            cell1: "Cell Data",
-            cell2: "Cell Data",
-            cell3: "Cell Data",
-            cell4: "Cell Data",
-        },
-        {
-            cell1: "Cell Data",
-            cell2: "Cell Data",
-            cell3: "Cell Data",
-            cell4: "Cell Data",
-        },
-    ];
-    return (<main>
+	// function handleHowdyClick() {
+	// 	vscode.postMessage({
+	// 		command: "hello",
+	// 		text: "Hey there partner! 🤠",
+	// 	})
+	// }
+	var rowData = [
+		{
+			cell1: "Cell Data",
+			cell2: "Cell Data",
+			cell3: "Cell Data",
+			cell4: "Cell Data",
+		},
+		{
+			cell1: "Cell Data",
+			cell2: "Cell Data",
+			cell3: "Cell Data",
+			cell4: "Cell Data",
+		},
+		{
+			cell1: "Cell Data",
+			cell2: "Cell Data",
+			cell3: "Cell Data",
+			cell4: "Cell Data",
+		},
+	]
+	return (
+		<main>
 			<h1>Hello World!</h1>
 			<react_1.VSCodeButton>Howdy!</react_1.VSCodeButton>
 
@@ -48,12 +49,16 @@ function Demo() {
 							Custom Title
 						</react_1.VSCodeDataGridCell>
 					</react_1.VSCodeDataGridRow>
-					{rowData.map(function (row, index) { return (<react_1.VSCodeDataGridRow key={index}>
-							<react_1.VSCodeDataGridCell grid-column="1">{row.cell1}</react_1.VSCodeDataGridCell>
-							<react_1.VSCodeDataGridCell grid-column="2">{row.cell2}</react_1.VSCodeDataGridCell>
-							<react_1.VSCodeDataGridCell grid-column="3">{row.cell3}</react_1.VSCodeDataGridCell>
-							<react_1.VSCodeDataGridCell grid-column="4">{row.cell4}</react_1.VSCodeDataGridCell>
-						</react_1.VSCodeDataGridRow>); })}
+					{rowData.map(function (row, index) {
+						return (
+							<react_1.VSCodeDataGridRow key={index}>
+								<react_1.VSCodeDataGridCell grid-column="1">{row.cell1}</react_1.VSCodeDataGridCell>
+								<react_1.VSCodeDataGridCell grid-column="2">{row.cell2}</react_1.VSCodeDataGridCell>
+								<react_1.VSCodeDataGridCell grid-column="3">{row.cell3}</react_1.VSCodeDataGridCell>
+								<react_1.VSCodeDataGridCell grid-column="4">{row.cell4}</react_1.VSCodeDataGridCell>
+							</react_1.VSCodeDataGridRow>
+						)
+					})}
 				</react_1.VSCodeDataGrid>
 
 				<react_1.VSCodeTextField>
@@ -97,8 +102,9 @@ function Demo() {
 					<react_1.VSCodeRadio>Radio 2</react_1.VSCodeRadio>
 				</react_1.VSCodeRadioGroup>
 				<react_1.VSCodeTag>Tag</react_1.VSCodeTag>
-				<react_1.VSCodeTextArea placeholder="Text Area"/>
+				<react_1.VSCodeTextArea placeholder="Text Area" />
 			</div>
-		</main>);
+		</main>
+	)
 }
-exports.default = Demo;
+exports.default = Demo

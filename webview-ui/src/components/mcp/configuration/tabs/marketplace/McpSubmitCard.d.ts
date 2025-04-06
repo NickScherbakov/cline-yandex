@@ -1,2 +1,2 @@
-declare const McpSubmitCard: () => import("react").JSX.Element;
-export default McpSubmitCard;
+declare const McpSubmitCard: () => import("react").JSX.Element
+export default McpSubmitCard
