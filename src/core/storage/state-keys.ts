@@ -19,6 +19,8 @@ export type SecretKey =
 	| "asksageApiKey"
 	| "xaiApiKey"
 	| "sambanovaApiKey"
+	| "yandexcloudApiKey"
+
 export type GlobalStateKey =
 	| "apiProvider"
 	| "apiModelId"
@@ -66,3 +68,4 @@ export type GlobalStateKey =
 	| "asksageApiUrl"
 	| "thinkingBudgetTokens"
 	| "planActSeparateModelsSetting"
+	| "yandexcloudFolderId"

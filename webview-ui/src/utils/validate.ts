@@ -103,6 +103,11 @@ export function validateApiConfiguration(apiConfiguration?: ApiConfiguration): s
 					return "You must provide a valid API key or choose a different provider."
 				}
 				break
+			case "yandexcloud":
+				if (!apiConfiguration.yandexcloudApiKey || !apiConfiguration.yandexcloudFolderId) {
+					return "You must provide a valid API key and Folder ID or choose a different provider."
+				}
+				break
 		}
 	}
 	return undefined
