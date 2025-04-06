@@ -98,9 +98,7 @@ describe("YandexCloudHandler", () => {
 	describe("createMessage", () => {
 		it("should make a request to YandexCloud API with correct parameters", async () => {
 			const systemPrompt = "You are a helpful assistant."
-			const messages: Anthropic.Messages.MessageParam[] = [
-				{ role: "user", content: "Hello, who are you?" },
-			]
+			const messages: Anthropic.Messages.MessageParam[] = [{ role: "user", content: "Hello, who are you?" }]
 
 			// Mock the stream response
 			const mockAsyncGenerator = async function* () {
@@ -113,7 +111,7 @@ describe("YandexCloudHandler", () => {
 
 			const result = handler.createMessage(systemPrompt, messages)
 			const iterator = result[Symbol.asyncIterator]()
-			
+
 			// Collect the yielded values
 			const chunks = []
 			let chunk = await iterator.next()

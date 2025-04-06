@@ -1484,7 +1484,7 @@ export const sambanovaModels = {
 export type YandexCloudModelId = keyof typeof yandexCloudModels
 export const yandexCloudDefaultModelId: YandexCloudModelId = "yandexgpt"
 export const yandexCloudModels = {
-	"yandexgpt": {
+	yandexgpt: {
 		maxTokens: 8192,
 		contextWindow: 24_000,
 		supportsImages: false,
@@ -1502,7 +1502,7 @@ export const yandexCloudModels = {
 		outputPrice: 0.6,
 		description: "Легкая версия YandexGPT с высокой скоростью обработки запросов",
 	},
-	"summarization": {
+	summarization: {
 		maxTokens: 4096,
 		contextWindow: 100_000,
 		supportsImages: false,

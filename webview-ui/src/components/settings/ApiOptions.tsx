@@ -1414,7 +1414,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 				</div>
 			)}
 
-				{selectedProvider === "yandexcloud" && (
+			{selectedProvider === "yandexcloud" && (
 				<div>
 					<VSCodeTextField
 						value={apiConfiguration?.yandexcloudApiKey || ""}
