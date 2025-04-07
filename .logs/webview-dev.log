@@ -23,7 +23,7 @@
 failed to load config from /workspaces/cline-yandex/webview-ui/vite.config.js
 error when starting dev server:
 ReferenceError: exports is not defined in ES module scope
-    at file:///workspaces/cline-yandex/webview-ui/node_modules/.vite-temp/vite.config.js.timestamp-1744018021666-fb9908095cfe5.mjs:10:23
+    at file:///workspaces/cline-yandex/webview-ui/node_modules/.vite-temp/vite.config.js.timestamp-1744018643142-8d8f99ad56ad3.mjs:10:23
     at ModuleJob.run (node:internal/modules/esm/module_job:263:25)
     at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)
     at async loadConfigFromBundledFile (file:///workspaces/cline-yandex/webview-ui/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:54671:15)
