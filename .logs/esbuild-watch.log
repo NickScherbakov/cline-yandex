@@ -1,0 +1,6 @@
+
+> claude-dev@3.9.2 watch:esbuild
+> node esbuild.js --watch
+
+[watch] build started
+[watch] build finished

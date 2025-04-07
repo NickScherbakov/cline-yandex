@@ -1,0 +1,25 @@
+
+> claude-dev@3.9.2 watch:tsc
+> tsc --noEmit --watch --project tsconfig.json
+
+c9:26:58 AM - Starting compilation in watch mode...
+
+src/api/providers/yandexcloud.test.ts(7,1): error TS2304: Cannot find name 'jest'.
+src/api/providers/yandexcloud.test.ts(11,18): error TS2503: Cannot find namespace 'jest'.
+src/api/providers/yandexcloud.test.ts(12,18): error TS2503: Cannot find namespace 'jest'.
+src/api/providers/yandexcloud.test.ts(15,16): error TS2304: Cannot find name 'jest'.
+src/api/providers/yandexcloud.test.ts(17,26): error TS2503: Cannot find namespace 'jest'.
+src/api/providers/yandexcloud.test.ts(30,32): error TS2503: Cannot find namespace 'jest'.
+src/api/providers/yandexcloud.test.ts(34,3): error TS2304: Cannot find name 'jest'.
+src/api/providers/yandexcloud.test.ts(39,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(54,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(68,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(69,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(81,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(82,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(93,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(94,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(124,4): error TS2304: Cannot find name 'expect'.
+src/api/providers/yandexcloud.test.ts(135,4): error TS2304: Cannot find name 'expect'.
+
+9:27:56 AM - Found 17 errors. Watching for file changes.
