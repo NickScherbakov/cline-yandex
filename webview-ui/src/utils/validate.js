@@ -106,6 +106,11 @@ function validateApiConfiguration(apiConfiguration) {
 					return "You must provide a valid API key or choose a different provider."
 				}
 				break
+			case "yandexcloud":
+				if (!apiConfiguration.yandexcloudApiKey) {
+					return "You must provide a valid API key or choose a different provider."
+				}
+				break
 		}
 	}
 	return undefined
