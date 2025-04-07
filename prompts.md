@@ -64,4 +64,50 @@ These instructions are dynamically added to the system prompt to tailor the AI's
 
 ---
 
+## 4. YandexGPT Prompts
+
+### File: `docs/providers/yandexcloud-examples.md`
+
+The project includes specific examples and guidelines for prompting the YandexGPT models provided by Yandex Cloud. These prompts are tailored to the specific capabilities and strengths of the YandexGPT models.
+
+Key components include:
+
+- **Basic Prompting Principles**:
+  - Be specific in formulating requests
+  - Provide context for better understanding
+  - Specify the desired format of the response
+
+- **Development-Related Prompts**:
+  - Code analysis and explanation prompts
+  - Code refactoring prompts
+  - Unit testing generation prompts
+  - API documentation generation prompts
+
+- **Language-Specific Guidelines**:
+  - Optimizations for Russian language prompts
+  - Technical translation examples
+  - Specialized prompts for the summarization model
+
+- **Model-Specific Recommendations**:
+  - `yandexgpt` - Best for complex tasks and code generation
+  - `yandexgpt-lite` - Optimized for quick responses and dialogues
+  - `summarization` - Specialized for text summarization and large documents
+
+### Example:
+```
+Объясни, что делает следующая функция:
+
+```javascript
+function throttle(func, ms) {
+  // Function code here
+}
+```
+
+Объясни принцип работы и возможные сценарии использования.
+```
+
+This prompt requests the YandexGPT model to analyze and explain a JavaScript function with its working principle and usage scenarios.
+
+---
+
 This document serves as a reference for understanding and extending the prompts used in this project.
